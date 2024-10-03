@@ -49,7 +49,6 @@ nav ul li a:hover, nav ul li a:focus {
 
 /* Main content */
 main {
-    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     background-color: #ffffff; /* Ensure white background for main content */
@@ -76,52 +75,36 @@ section p {
 
 /* Team section */
 #team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-#team article {
-    background-color: #f0f8ff;
-    padding: 1.5rem;
+    background-color: #f5f5f5;
     border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#team article:hover {
-    transform: translateY(-5px);
-}
-
-#team h3 {
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-#team p {
-    color: #666;
-}
-
-/* Team section */
 #team h2 {
     color: #d64933;
     margin-bottom: 1.5rem;
     text-align: center;
 }
 
+/* Team section */
 .team-members {
     display: grid;
-    gap: 1.5rem;
+    /*gap: 1.5rem; */
+    justify-content: center;
 }
 
 .team-members article {
-    background-color: #e6e6e6; /* Slightly darker background for team members */
+    background-color: #f0f8ff;
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #b33d2e;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Set a maximum width*/
+    width: 100%; /* Ensure it takes full width on small screens */
 }
 
 .team-members article:hover {
@@ -130,20 +113,21 @@ section p {
 }
 
 .team-members h3 {
-    color: #000000; /* Black text for names */
+    color: #333;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 .team-members p {
-    color: #333333; /* Dark gray for roles */
+    color: #666;
     font-size: 1rem;
 }
 
-/* Media query for screens larger than 480px */
-@media screen and (min-width: 481px) {
+
+/* Media query for screens larger than 768px */
+@media screen and (min-width: 768px) {
     .team-members {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
