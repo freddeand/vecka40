@@ -16,7 +16,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #ff6f61; /* Vibrant coral */
+    background-color: #d64933; /* Darker coral for better contrast */
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
@@ -42,12 +42,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff9f80; /* Lighter coral */
+    background-color: #f2a391; /* Lighter coral with better contrast */
+    color: #000000; /* Black text on hover for contrast */
     transform: translateY(-3px);
 }
 
 /* Main sections */
 main {
+    background-color: #ffffff; /* Ensure white background for main content */
     padding: 2rem;
 }
 
@@ -119,18 +121,18 @@ main {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #ff6f61;
+    background-color: #d64933; /* Darker coral to match header */
     color: #fff;
     margin-top: 2rem;
     border-radius: 8px;
 }
 
 footer a {
-    color: #fff;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
     font-weight: bold;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #f2a391; /* Lighter coral on hover */
 }

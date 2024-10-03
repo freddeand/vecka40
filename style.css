@@ -1,0 +1,116 @@
+/* About Us specific styling */
+
+header {
+    background-color: #d64933; /* Darker coral for better contrast */
+}
+/* Header */
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Ensure white text on dark background */
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff; /* Ensure white background for main content */
+}
+
+
+/* Section styling */
+section {
+    background-color: #f5f5f5; /* Light gray background */
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #d64933; /* Darker coral for headings */
+    margin-bottom: 1rem;
+}
+
+section p {
+    color: #333333; /* Darker text for better readability */
+}
+
+/* Team section */
+#team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+#team article {
+    background-color: #f0f8ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#team article:hover {
+    transform: translateY(-5px);
+}
+
+#team h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#team p {
+    color: #666;
+}
+
+/* Team section */
+#team h2 {
+    color: #d64933;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.team-members {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.team-members article {
+    background-color: #e6e6e6; /* Slightly darker background for team members */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-members article:hover {
+    transform: translateY(-5px);
+}
+
+.team-members h3 {
+    color: #000000; /* Black text for names */
+    margin-bottom: 0.5rem;
+}
+
+.team-members p {
+    color: #333333; /* Dark gray for roles */
+}
+
+/* Media query for screens larger than 480px */
+@media screen and (min-width: 481px) {
+    .team-members {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #d64933; /* Darker coral to match header */
+    color: #fff;
+    border-radius: 0;
+}
