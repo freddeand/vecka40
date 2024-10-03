@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple homepage to showcase our services.">
     <title>Simple Homepage</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <!-- Main container for the page content -->
     <header>
+        <h1>Welcome to Our Website</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -22,7 +24,7 @@
     <main>
         <!-- Section for a hero or introductory content -->
         <section id="home">
-            <h1>Welcome to Our Website</h1>
+            <p>We are a team of students who are learning how to create websites.</p>
             <p>Your journey to discovering our services starts here.</p>
         </section>
 
@@ -35,14 +37,16 @@
         <!-- Services section -->
         <section id="services">
             <h2>Our Services</h2>
-            <article>
-                <h3>Service One</h3>
-                <p>Description of service one.</p>
-            </article>
-            <article>
+            <div class="services-container">
+                <article>
+                    <h3>Service One</h3>
+                    <p>Description of service one.</p>
+                </article>
+                <article>
                 <h3>Service Two</h3>
                 <p>Description of service two.</p>
-            </article>
+                </article>
+            </div>
         </section>
     </main>
 

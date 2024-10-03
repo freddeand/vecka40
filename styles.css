@@ -16,10 +16,17 @@ body {
 
 /* Header styling */
 header {
-    background-color: #d64933; /* Darker coral for better contrast */
+    background-color: #b33d2e; /* Darker background for better contrast */    color: #fff;
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Ensure white text on dark background */
 }
 
 nav ul {
@@ -41,15 +48,16 @@ nav ul li a {
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
-nav ul li a:hover {
-    background-color: #f2a391; /* Lighter coral with better contrast */
-    color: #000000; /* Black text on hover for contrast */
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #ffffff; /* White background on hover/focus */
+    color: #b33d2e; /* Dark text on hover/focus for contrast */
     transform: translateY(-3px);
 }
 
 /* Main sections */
 main {
     background-color: #ffffff; /* Ensure white background for main content */
+    margin: 0 auto;
     padding: 2rem;
 }
 
@@ -58,7 +66,8 @@ main {
     text-align: center;
     padding: 3rem 0;
     background: linear-gradient(135deg, #ffcc33, #ff6f61); /* Colorful gradient */
-    color: #fff;
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333;
     border-radius: 8px;
 }
 
@@ -90,41 +99,69 @@ main {
 
 /* Services section */
 #services {
-    margin-top: 2rem;
+    /*margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    background-color: #e6e6fa; /* Soft lavender */
+    background-color: #e6e6fa;
     padding: 2rem;
+    border-radius: 8px; */
+    background-color: #f5f5f5; /* Light gray background */
     border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#services article {
-    background-color: #fff;
+#services h2 {
+    color: #d64933;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.services-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.services-container article {
+    background-color: #ffffff;
     padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#services article:hover {
+.services-container article:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#services h3 {
+.services-container h3 {
+    color: #b33d2e;
     margin-bottom: 0.5rem;
-    color: #ff6f61;
+    font-size: 1.2rem;
+}
+
+.services-container p {
+    color: #333333;
+    font-size: 1rem;
+}
+
+/* Media query for screens larger than 768px */
+@media screen and (min-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Footer styling */
 footer {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #d64933; /* Darker coral to match header */
-    color: #fff;
-    margin-top: 2rem;
-    border-radius: 8px;
+    padding: 1rem;
+    background-color: #b33d2e; /* Darker background to match header */
+    color: #ffffff; /* White text for maximum contrast */
+    border-radius: 0;
 }
 
 footer a {
@@ -133,6 +170,7 @@ footer a {
     font-weight: bold;
 }
 
-footer a:hover {
-    color: #f2a391; /* Lighter coral on hover */
+footer a:hover, footer a:focus {
+    color: #ffd700; /* Bright yellow for hover/focus state */
+    text-decoration: none;
 }
