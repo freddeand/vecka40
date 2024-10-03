@@ -44,7 +44,6 @@ nav ul li a {
 nav ul li a:hover, nav ul li a:focus {
     background-color: #ffffff; /* White background on hover/focus */
     color: #b33d2e; /* Dark text on hover/focus for contrast */
-    /*transform: translateY(-3px);*/
 }
 
 /* Main content */
@@ -92,6 +91,7 @@ section p {
 .team-members {
     display: grid;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .team-members article {
@@ -101,14 +101,14 @@ section p {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #b33d2e;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Set a maximum width*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Set a maximum width */
     width: 100%; /* Ensure it takes full width on small screens */
 }
 
 .team-members article:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .team-members h3 {
@@ -120,14 +120,6 @@ section p {
 .team-members p {
     color: #666;
     font-size: 1rem;
-}
-
-
-/* Media query for screens larger than 768px */
-@media screen and (min-width: 768px) {
-    .team-members {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 /* Footer */
