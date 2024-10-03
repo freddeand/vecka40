@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, modern font */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #ffffff; /* Set a white background */
+    color: #333; /* Dark text for contrast */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Darker color for headings */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #2980b9; /* Blue color for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #34495e; /* Dark blue background */
+    padding: 10px 20px; /* Padding for header */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+nav li {
+    margin-right: 20px; /* Space between nav items */
+}
+
+nav a {
+    color: #ffffff; /* White text for links in nav */
+    font-weight: bold; /* Bold links */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding for main content */
+}
+
+section {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+h1 {
+    font-size: 2em; /* Font size for main heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+h2 {
+    font-size: 1.5em; /* Font size for section headings */
+    margin-top: 20px; /* Space above section heading */
+    margin-bottom: 10px; /* Space below section heading */
+}
+
+/* Image Styles */
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Aside Styles */
+aside {
+    background-color: #ecf0f1; /* Light gray background for aside */
+    padding: 20px; /* Padding for aside */
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px 0; /* Space above and below aside */
+}
+
+/* Testimonials Section Styles */
+#testimonials {
+    background-color: #f7f7f7; /* Light background for testimonials */
+    padding: 20px; /* Padding for testimonials section */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #34495e; /* Dark blue background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center text */
+    padding: 10px 20px; /* Padding for footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav li {
+        margin-bottom: 10px; /* Space between nav items */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Slightly smaller on mobile */
+    }
+
+    h2 {
+        font-size: 1.4em; /* Slightly smaller on mobile */
+    }
+
+    main {
+        padding: 10px; /* Less padding on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Further reduce font size for very small screens */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Further reduce font size for very small screens */
+    }
+}
+
+
+/* Testimonials Section Styles */
+#testimonials {
+    position: relative; /* Positioning for buttons */
+    overflow: hidden; /* Hide overflow for carousel */
+    margin: 20px 0; /* Margin for the section */
+    background-color: #f7f7f7; /* Light background */
+    padding: 20px; /* Padding for the section */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.carousel {
+    display: flex; /* Flexbox for slides */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Full width for each slide */
+    box-sizing: border-box; /* Box model */
+    padding: 20px; /* Padding for each slide */
+}
+
+.customer-image {
+    width: 100px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circle image */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.carousel-button {
+    position: absolute; /* Position buttons */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical position */
+    background-color: rgba(255, 255, 255, 0.8); /* Button background */
+    border: none; /* No border */
+    padding: 10px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor */
+    z-index: 10; /* Above slides */
+}
+
+.carousel-button.prev {
+    left: 10px; /* Position left */
+}
+
+.carousel-button.next {
+    right: 10px; /* Position right */
+}
