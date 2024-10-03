@@ -1,7 +1,18 @@
 /* About Us specific styling */
+body {
+    background-color: #f0f8ff; /* Light background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
 header {
-    background-color: #d64933; /* Darker coral for better contrast */
+    background-color: #b33d2e; /* Darker background for better contrast */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* Header */
 header h1 {
@@ -9,6 +20,31 @@ header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #ffffff; /* Ensure white text on dark background */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #ffffff; /* White background on hover/focus */
+    color: #b33d2e; /* Dark text on hover/focus for contrast */
+    /*transform: translateY(-3px);*/
 }
 
 /* Main content */
@@ -69,7 +105,7 @@ section p {
 /* Team section */
 #team h2 {
     color: #d64933;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
@@ -84,19 +120,24 @@ section p {
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease;
+    border: 2px solid #b33d2e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .team-members article:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .team-members h3 {
     color: #000000; /* Black text for names */
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .team-members p {
     color: #333333; /* Dark gray for roles */
+    font-size: 1rem;
 }
 
 /* Media query for screens larger than 480px */
@@ -110,7 +151,19 @@ section p {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #d64933; /* Darker coral to match header */
-    color: #fff;
+    background-color: #b33d2e; /* Darker background to match header */
+    color: #ffffff; /* White text for maximum contrast */
     border-radius: 0;
+}
+
+footer a {
+    color: #ffffff; /* White text for links */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #ffd700; /* Bright yellow for hover/focus state */
+    text-decoration: none;
 }
