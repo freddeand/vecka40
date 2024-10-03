@@ -1,10 +1,4 @@
-:root {
-    --primary-color: #0056b3; /* Darker blue for header and footer */
-    --text-light: #ffffff; /* White text for dark backgrounds */
-    --text-dark: #333333; /* Dark text for light backgrounds */
-    --background-light: #f8f9fa; /* Light background for main content */
-    --accent-color: #ffc107; /* Yellow accent for hover effects */
-}
+
 
 
 /* General styling */
@@ -23,17 +17,7 @@ body {
     padding: 0;
 }
 
-/* ... previous styles ... */
 
-/* Header styling */
-/* Header styling */
-/* Header styling */
-/* Header styling */
-/* Header styling */
-/* ... previous styles ... */
-
-/* Header styling */
-/* Header styling */
 header {
     background-color: #b33d2e; /* Darker background for better contrast */
     color: #fff;
@@ -46,6 +30,7 @@ h1 {
     margin: 0;
     font-size: 1.5rem;
 }
+
 
 nav ul {
     display: flex;
@@ -60,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
@@ -68,83 +53,92 @@ nav ul li a {
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
-nav ul li a:hover {
-    background-color: #ff9f80;
-    transform: translateY(-3px);
+/* Header styles */
+header {
+    background-color: #b33d2e;
+    padding: 1rem;
+    position: relative;
 }
 
+/* Hamburger button styles */
 .hamburger {
     display: none;
     background: none;
     border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    position: fixed;
-    right: 1rem;
-    top: 1rem;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1000;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
 }
 
 .hamburger span {
     display: block;
-    width: 100%;
+    width: 30px;
     height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
+    background-color: #ffffff;
+    margin: 6px auto;
     transition: all 0.3s ease;
 }
 
-/* Responsive styles */
+/* Navigation styles */
+nav {
+    background-color: #b33d2e;
+}
+
+nav ul li a {
+    color: #ffffff;
+}
+
+/* Hamburger button animation when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 70%;
-        max-width: 300px;
-        height: 100vh;
-        background-color: #ff6f61;
-        padding: 4rem 1rem 1rem;
-        z-index: 999;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    nav.active {
-        display: block;
-        transform: translateX(0);
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin: 1rem 0;
-    }
-   
-
     .hamburger {
         display: block;
     }
 
-    /* Hamburger animation */
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 70%;
+        max-width: 300px;
+        background-color: #b33d2e;
+        padding: 1rem;
+        z-index: 999;
     }
 
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
+    nav.active {
+        display: block;
     }
 
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 }
+
+
 
 @media screen and (max-width: 480px) {
     h1 {
@@ -207,39 +201,7 @@ button {
     font-size: 1rem;
 }
 
-button:hover {
-    background-color: #ff9f80;
-    transform: translateY(-3px);
-}
 
-/* Contact info section */
-#contact-info {
-    background-color: #e6e6fa; /* Soft lavender */
-    color: #333;
-}
-
-#contact-info h2 {
-    color: #b33d2e;;
-    margin-bottom: 1rem;
-}
-
-#contact-info p {
-    margin-bottom: 0.75rem;
-}
-
-#contact-info a {
-    color: #b33d2e;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#contact-info a:hover {
-    text-decoration: underline;
-}
-
-address {
-    font-style: normal;
-}
 
 
 /* Footer styling */
@@ -286,5 +248,114 @@ footer {
 
     button {
         width: 100%;
+    }
+}
+
+/* IMG  box med text */
+/* Base styles */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.contact-image {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: max-width 0.3s ease;
+}
+
+/* Typography */
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+    font-size: 1rem;
+}
+
+address p {
+    margin-bottom: 0.5em;
+}
+
+address a {
+    color: #24030e;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .contact-image {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .contact-image {
+        max-width: 160px;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contact-image {
+        max-width: 140px;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    address {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-image {
+        max-width: 120px;
     }
 }
