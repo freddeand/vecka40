@@ -48,10 +48,6 @@ main {
     padding: 20px; /* Padding for main content */
 }
 
-section {
-    margin-bottom: 40px; /* Space between sections */
-}
-
 h1 {
     font-size: 2em; /* Font size for main heading */
     margin-bottom: 20px; /* Space below heading */
@@ -74,7 +70,6 @@ aside {
     background-color: #ecf0f1; /* Light gray background for aside */
     padding: 20px; /* Padding for aside */
     border-radius: 5px; /* Rounded corners */
-    margin: 20px 0; /* Space above and below aside */
 }
 
 /* Testimonials Section Styles */
@@ -131,7 +126,6 @@ footer {
 #testimonials {
     position: relative; /* Positioning for buttons */
     overflow: hidden; /* Hide overflow for carousel */
-    margin: 20px 0; /* Margin for the section */
     background-color: #f7f7f7; /* Light background */
     padding: 20px; /* Padding for the section */
     border-radius: 5px; /* Rounded corners */
@@ -172,4 +166,44 @@ footer {
 
 .carousel-button.next {
     right: 10px; /* Position right */
+}
+
+
+/* Main Container Grid Layout */
+.grid-container {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-gap: 20px; /* Space between grid items */
+}
+
+/* For larger screens, create a two-column layout */
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+
+    /* Specific styles for the hero section */
+    #hero {
+        grid-column: 1 / -1; /* Span the entire width */
+    }
+
+    /* Right column containing aside and testimonials */
+    aside {
+        grid-column: 2;
+    }
+    #testimonials {
+        grid-column: 2;
+    }
+    .services-section {
+        grid-column: 1;
+        grid-row: span 2;
+    }
+}
+/* Style for other sections */
+section, aside {
+    background-color: #ffffff; /* White background for sections */
+    padding: 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
