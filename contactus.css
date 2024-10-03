@@ -1,0 +1,281 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Header styles */
+header {
+    background-color: #b33d2e;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 6px auto;
+    transition: all 0.3s ease;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Contact form and info */
+#contact-form, #contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #b33d2e;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+/* Contact info styles */
+.contact-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.contact-image {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: max-width 0.3s ease;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+    font-size: 1rem;
+}
+
+address p {
+    margin-bottom: 0.5em;
+}
+
+address a {
+    color: #24030e;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #b33d2e;
+    color: #fff;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .contact-image {
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .contact-image {
+        max-width: 160px;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 70%;
+        max-width: 300px;
+        background-color: #b33d2e;
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contact-image {
+        max-width: 140px;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    address {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 0.75rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #contact-info {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .contact-image {
+        max-width: 120px;
+    }
+}
