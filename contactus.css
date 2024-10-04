@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.nav-links a.active {
+    font-weight: bold;
+    /* Or any other style to indicate the current page */
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
