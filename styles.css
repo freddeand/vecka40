@@ -174,3 +174,45 @@ footer a:hover, footer a:focus {
     color: #ffd700; /* Bright yellow for hover/focus state */
     text-decoration: none;
 }
+
+/* Language switcher styles */
+.language-switcher {
+    text-align: right;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+.language-switcher a[aria-current="page"] {
+    color: #007bff;
+    background-color: #ffffff; /* White background for current page */
+}
+
+.language-switcher span {
+    color: #ccc;
+}
+
+@media (max-width: 600px) {
+    .language-switcher {
+        justify-content: center;
+    }
+}
