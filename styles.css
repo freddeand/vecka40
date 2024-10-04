@@ -142,6 +142,10 @@ footer a:hover {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 .language-switcher a {
@@ -149,10 +153,18 @@ footer a:hover {
     color: #333;
     font-weight: bold;
     margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
 }
 
 .language-switcher a[aria-current="page"] {
     color: #007bff;
+    background-color: #ffffff; /* White background for current page */
 }
 
 .language-switcher span {
