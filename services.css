@@ -4,7 +4,7 @@ body {
     line-height: 1.6; /* Improve readability */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    background-color: #ffffff; /* Set a white background */
+    /* background-color: #ffffff; Set a white background */
     color: #333; /* Dark text for contrast */
 }
 
@@ -23,7 +23,7 @@ a:hover {
 
 /* Header and Navigation Styles */
 header {
-    background-color: #34495e; /* Dark blue background */
+    /* background-color: #34495e; Dark blue background */
     padding: 10px 20px; /* Padding for header */
 }
 
@@ -81,7 +81,7 @@ aside {
 
 /* Footer Styles */
 footer {
-    background-color: #34495e; /* Dark blue background */
+    /* background-color: #34495e; Dark blue background */
     color: #ffffff; /* White text */
     text-align: center; /* Center text */
     padding: 10px 20px; /* Padding for footer */
