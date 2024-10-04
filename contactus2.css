@@ -1,0 +1,416 @@
+:root {
+    --bg-color: #f0f8ff;
+    --text-color: #333;
+    --primary-color: #b33d2e;
+    --secondary-color: #ffffff;
+    --accent-color: #24030e;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme variables */
+.dark-theme {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --secondary-color: #444444;
+    --border-color: #555;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger .line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 2.5rem 0;
+    }
+}
+
+/* Hamburger animation */
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Theme toggle styles */
+#theme-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.sun-and-moon > .sun {
+    fill: var(--icon-fill);
+}
+
+.sun-and-moon > .sun-beams {
+    stroke: var(--icon-fill);
+}
+
+.sun-and-moon > .moon > circle {
+    fill: var(--icon-fill);
+    transition: transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25);
+}
+
+.dark-theme .sun-and-moon > .sun {
+    transform: scale(1.75);
+}
+
+.dark-theme .sun-and-moon > .sun-beams {
+    opacity: 0;
+}
+
+.dark-theme .sun-and-moon > .moon > circle {
+    transform: translateX(-7px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sun-and-moon > .sun,
+    .sun-and-moon > .sun-beams,
+    .sun-and-moon > .moon > circle {
+        transition: none;
+    }
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#contact-form, #contact-info {
+    flex: 1 1 400px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color), 0 1px 3px var(--shadow-color);
+    padding: 2rem;
+}
+
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(179, 61, 46, 0.1);
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.footer-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-button {
+        margin-top: 1rem;
+    }
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-form, #contact-info {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contact-form, #contact-info {
+        padding: 1.5rem;
+    }
+
+    .contact-image {
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact-form, #contact-info {
+        padding: 1rem;
+    }
+
+    .contact-image {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(179, 61, 46, 0.1);
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 1.5rem;
+    }
+}

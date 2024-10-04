@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactus2.css">
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Your Logo</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus2.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle dark theme">
+            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+            </svg>
+        </button>
+    </header>
+    
+    <main>
+        <div class="contact-container">
+            <section id="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="/submit-form" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+            <section id="contact-info">
+                <h2>Our Contact Information</h2>
+                <div class="contact-content">
+                    <img src="/output.jpg" alt="Our smiling co-worker" class="contact-image">
+                    <address>
+                        <p>42 Wisecrack Lane</p>
+                        <p>Giggleton, HA HA1 LOL</p>
+                        <p>Phone: <a href="tel:+18005551234">(800) 555-1234</a></p>
+                        <p>Email: <a href="mailto:laughs@seriousbusiness.com">laughs@seriousbusiness.com</a></p>
+                    </address>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p aria-label="Copyright information">&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
