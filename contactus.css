@@ -83,12 +83,10 @@ main {
     background-color: transparent;
 }
 
-.contact-content {
+.contact-container {
     display: flex;
-    align-items: center;
     gap: 2rem;
-    justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /* Contact form and info */
